@@ -6,25 +6,29 @@
     border: none;
 }
 
-// body {
-//     height: 100vh;
-//     width: 100%;
-//     background-color: #fff;
-//     font-family: monospace;
-// }
-
 button {
     height: 65px;
     width: 65px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: bold;
     text-align: center;
     background: #d4d4d2;
     box-shadow: 9px 9px 18px #b4b4b3,
         -9px -9px 18px #f4f4f2;
-    // box-shadow: 10px 10px 20px #b4b4b3,
-    //     -10px -10px 20px #f4f4f2;
+
+    &:hover {
+        background: linear-gradient(145deg, #bfbfbd, #e3e3e1);
+        box-shadow: 9px 9px 18px #b4b4b3,
+            -9px -9px 18px #f4f4f2;
+    }
+
+    &.equal {
+        width: 98%;
+        height: 60px;
+        border-radius: 1.5rem;
+        grid-column: span 2;
+    }
 }
 
 .container {
@@ -36,31 +40,21 @@ button {
     align-items: center;
 
     &-wrapper {
-        background-color: #d4d4d2;
         padding: 1.5rem 1.5rem 2rem;
         border-radius: 1.5rem;
-        box-shadow: 20px 20px 60px #b4b4b3,
-            -20px -20px 60px #f4f4f2;
+        background: linear-gradient(145deg, #e3e3e1, #bfbfbd);
+        box-shadow: 25px 25px 50px #acacaa,
+            -25px -25px 50px #fcfcfa;
         display: grid;
         grid-template-columns: repeat(4, 65px);
         gap: 20px;
     }
-
-    &-equal {
-        width: 98%;
-        height: 60px;
-        border-radius: 1.5rem;
-        grid-column: span 2;
-    }
-
 }
 
 input[type="text"] {
     grid-column: span 4;
     height: 6rem;
     font-size: 3rem;
-    // height: 70px;
-    // font-size: 35px;
     color: #505050;
     border-radius: 1.5rem;
     padding: 0 1rem;
